@@ -1,0 +1,17 @@
+
+digraph simple_hierarchy {
+
+node [color=Green,fontcolor=Blue,font=Courier,shape=record]
+
+
+"Memory(0)"[shape=record,sides=5,peripheries=2,color=darkseagreen,style=filled]
+"L2(0)" -> "Memory(0)"
+
+"L2(0)"[shape=record,sides=5,peripheries=2,color=darkseagreen,style=filled]
+"IL1(0)" -> "L2(0)"
+
+"IL1(0)"[shape=record,sides=5,peripheries=2,color=darkseagreen,style=filled]
+"DL1(0)" -> "L2(0)"
+
+"DL1(0)"[shape=record,sides=5,peripheries=2,color=darkseagreen,style=filled]
+}
