@@ -4,7 +4,7 @@
 using namespace std;
 using namespace alg;
 
-const unsigned N = 4096*32;
+const unsigned N = 4096*32*8;
 const unsigned N_ELEMS_TO_REMOVE = N-128; // Must be between 0 and N-1
 
 template <typename T> 
@@ -57,8 +57,8 @@ int main()
 
     // Outputting to cerr so the output can be redirected with ./avl_demo 2> <name>.gvz
     cout << "Do you want to output the GraphViz representation of the tree to the cerr stream (Y/n)? ";
-    char usrInput;
-    cin >> usrInput;
+    char usrInput = 'n';
+    // cin >> usrInput;
     if (usrInput == 'Y' || usrInput == 'y') avl.toGraphViz(cerr, "AVL");
     
     return 0;
